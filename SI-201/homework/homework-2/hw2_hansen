@@ -1,0 +1,102 @@
+
+# Sinclair Hansen
+# Homework 2: Drawing a snowglobe using Turtle
+# Date: 1/18/26
+
+from turtle import *
+import turtle
+import random
+
+# triangle function
+def draw_triangle(x, y, turtle, length, color):
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.color(color)
+    turtle.begin_fill()
+    for i in range(3):
+        turtle.forward(length)
+        turtle.left(120)
+    turtle.end_fill()
+# rectangle function
+def draw_rectangle(x, y, turtle, length, width, color):
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.color(color)
+    turtle.begin_fill()
+    for i in range(2):
+        turtle.forward(length)
+        turtle.left(90)
+        turtle.forward(width)
+        turtle.left(90)
+    turtle.end_fill()
+
+# tree function
+def draw_tree(x, y, turtle):
+    draw_rectangle(x, y, turtle, 30, 30, "brown")
+    x -= 10
+    y += 20
+    turtle.setheading(0)
+    for i in range(3):
+        draw_triangle(x, y, turtle, 50, "green")
+        y += 25
+
+# circle def
+def draw_circle(x, y, radius, turtle, color):
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.color(color)
+    turtle.begin_fill()
+    turtle.circle(radius)
+    turtle.end_fill()
+def draw_snowflakes(turtle):
+    for i in range(40):
+        x = random.randint(-200, 200)
+        y = random.randint(-20, 300)
+        draw_circle(x, y, 2, turtle, "white")
+
+
+def draw_snowglobe(turtle):
+    turtle.hideturtle()
+    turtle.speed(10)
+    draw_circle(0, -50,200, turtle, "LightBlue")
+
+    draw_tree(0, 0, turtle)
+    draw_tree(-50, 45, turtle)
+    draw_tree(-75, - 25, turtle)
+    draw_rectangle(45, 35, turtle, 60, 60, "peru")
+    draw_triangle(45, 95, turtle, 60, "brown")
+    draw_rectangle(-200, -100,turtle, 400, 70, "burlywood")
+
+    draw_s(turtle, 100, -50)
+    draw_h(turtle, 150, -100)
+
+    draw_snowflakes(turtle)
+def draw_s(turtle, x, y):
+    draw_rectangle(x,y, turtle, 25, 15, "LightBlue")
+    y -= 25
+    draw_rectangle(x, y, turtle, 15, 25, "LightBlue")
+    draw_rectangle(x, y, turtle, 25, 5, "LightBlue")
+    x += 15
+    y -= 25
+    draw_rectangle(x, y, turtle, 15, 25, "LightBlue")
+    x -= 15
+    draw_rectangle(x, y, turtle, 25, 5, "LightBlue")
+def draw_h(turtle, x, y):
+    draw_rectangle(x, y, turtle, 15, 60, "LightBlue")
+    y += 25
+    draw_rectangle(x, y, turtle, 25, 10, "LightBlue")
+    x += 25
+    y -=25
+    draw_rectangle(x, y, turtle, 15, 60, "LightBlue")
+#main
+def main():
+    turtle.title("Snow Globe")
+    screen = turtle.Screen()
+    screen.setup(1000,1000)
+    alex = Turtle("turtle")
+    draw_snowglobe(alex)
+    turtle.exitonclick()
+main()

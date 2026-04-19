@@ -1,0 +1,79 @@
+Title: Average Bill Length Difference in Male vs. Female Penguins of Each Species
+Adelie:
+ num_female: 3
+ bill_total_f: 107.80000000000001
+ num_male: 3
+ bill_total_m: 119.4
+ male_avg: 39.800000000000004
+ female_avg: 35.93333333333334
+ avg_diff: 3.866666666666667
+Chinstrap:
+ num_female: 3
+ bill_total_f: 135.1
+ num_male: 4
+ bill_total_m: 201.3
+ male_avg: 50.325
+ female_avg: 45.03333333333333
+ avg_diff: 5.291666666666671
+Gentoo:
+ num_female: 3
+ bill_total_f: 144.3
+ num_male: 3
+ bill_total_m: 151.10000000000002
+ male_avg: 50.366666666666674
+ female_avg: 48.1
+ avg_diff: 2.266666666666673
+
+Title: Percentage Difference From 2008 to 2009 of Penguins of Each Island Above the Average Body Mass
+Biscoe:
+ 08_num_penguins: 4
+ 08_mass_total: 17600.0
+ 09_num_penguins: 2
+ 09_mass_total: 10400.0
+ 08_avg_mass: 4400.0
+ 09_avg_mass: 5200.0
+ 08_abv_avg_mass_count: 1
+ 09_abv_avg_mass_count: 1
+ percent_diff: 25.0
+Dream:
+ 09_num_penguins: 4
+ 09_mass_total: 14050.0
+ 08_num_penguins: 3
+ 08_mass_total: 11550.0
+ 08_avg_mass: 3850.0
+ 09_avg_mass: 3512.5
+ 09_abv_avg_mass_count: 2
+ 08_abv_avg_mass_count: 1
+ percent_diff: 16.666666666666668
+Torgersen:
+ 08_num_penguins: 0
+ 09_num_penguins: 0
+ 08_avg_mass: 0
+ 09_avg_mass: 0
+ percent_diff: 0.0
+
+Title: Calculate the average flipper length of male penguins of each species across every year.
+Adelie:
+ 2007: 191.0
+ 2008: 188.0
+ 2009: 190.0
+Chinstrap:
+ 2007: 193.0
+ 2008: 201.5
+ 2009: 202.0
+Gentoo:
+ 2007: 213.0
+ 2008: 222.0
+ 2009: 228.0
+
+Title: Median body mass of male and female penguins across each island.
+Biscoe:
+ male: 5475.0
+ female: 4425.0
+Dream:
+ male: 3800.0
+ female: 3400.0
+Torgersen:
+ male: 3800.0
+ female: 3450.0
+
